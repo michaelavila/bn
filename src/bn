@@ -18,3 +18,5 @@ bn() {
     printf  "export PATH=\"\$target_dir:\$PATH\"\n\n"
   fi
 }
+
+bn $*
