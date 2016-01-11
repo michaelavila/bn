@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+bn() {
+  local target="${PWD}/${1:?'missing argument: target file'}"
+  local target_dir=`dirname "$target"`
+  local target_file=`basename "$target"`
+
+  # ensure that target is executable
+  [ ! -x "${target}" ] && chmod +x "${target}"
+
+  # if necessary, update $PATH
+  if [ ! `echo "${PATH}" | grep -q "${target_dir}"` ]; then
+    export PATH="${target_dir}:${PATH}"
+
+    printf  "\$PATH exported for the current session\n\n"
+    printf  "Add the following to your shell configuration if you\n"
+    printf  "want '${target_file}' available in all future sessions:\n\n"
+    printf  "export PATH=\"\$target_dir:\$PATH\"\n\n"
+  fi
+}

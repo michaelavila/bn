@@ -1,0 +1,27 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "BN" "1" "January 2016" "" ""
+.
+.SH "NAME"
+\fBbn\fR \- make executable links
+.
+.SH "SYNOPSIS"
+\fBbn\fR \fItarget_file\fR
+.
+.SH "DESCRIPTION"
+The \fBbn\fR utility:
+.
+.IP "\(bu" 4
+changes the mode of the \fItarget_file\fR so that it can be executed
+.
+.IP "\(bu" 4
+adds the directory containing the \fItarget_file\fR to the \fB$PATH\fR of the current session
+.
+.IP "\(bu" 4
+and suggests that the user update the \fB$PATH\fR in their shell configuration\.
+.
+.IP "" 0
+.
+.SH "SEE ALSO"
+chmod(1), environ(7)

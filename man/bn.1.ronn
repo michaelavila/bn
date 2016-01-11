@@ -1,0 +1,18 @@
+bn(1) -- make executable links
+==============================
+
+## SYNOPSIS
+
+`bn` <target_file>
+
+## DESCRIPTION
+
+The `bn` utility:
+
+* changes the mode of the <target_file> so that it can be executed
+* adds the directory containing the <target_file> to the `$PATH` of the current session
+* and suggests that the user update the `$PATH` in their shell configuration.
+
+## SEE ALSO
+
+chmod(1), environ(7)
